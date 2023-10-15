@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Home page | Olive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+      <header>
+        <a href="#"><img src="img/l1.png" class="logo"></a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li> 
+          <li><a href="lolivier.html">L'OLIVIER</a></li>
+          <li><a href="#">OLIVES</a></li>
+          <li><a href="#">TOURISME</a></li>
+          <li><a href="#">LIVRE A LIRE</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="text">
+          <h2>Olivier<br>de <span>provence.</span></h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, adipisci obcaecati! Accusamus fugiat obcaecati nesciunt maiores rerum placeat amet voluptatibus cumque soluta similique saepe, assumenda eos dolorum autem. Iusto enim accusamus optio cupiditate earum ipsam!</p>
+          <a href="#" class="btn">Explore</a>
+        </div>
+        <div class="col">
+            <div class="card card1">
+                <h5>LA TAILLE DE L’OLIVIER</h5>
+                <p>Les anciens aimaient les grands arbres car ils pensaient que plus l’arbre était important ...</p>
+            </div>
+            <div class="card card2">
+                <h5>L'OLIVE fruit de l'olivier</h5>
+                <p>On dénombre plus d’une centaine de variétés d’olives, mais en France on n’en cultive guère ...</p>
+            </div>
+            <div class="card card3">
+                <h5>LA CULTURE DE L’OLIVIER AU MAROC</h5>
+                <p>Importance et aire de culture de l’olivier au Maroc</p>
+            </div>
+            <div class="card card4">
+                <h5>LIVRES A LIRE</h5>
+                <p>LES LIVRES A LIRE SUR L’OLIVIER, L’OLIVE ET L’HUILE D’OLIVE</p>
+            </div>
+        </div>
+      </div>
+  
+      <div class="footer">
+        <ul class="sci">
+          <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+      </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        //toggle 
+        const menutoggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        menutoggle.onclick = function(){
+          menutoggle.classList.toggle('active')
+          navigation.classList.toggle('active')
+        }
+    
+        //slider
+        const slides = document.querySelectorAll('.slides');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+    
+        i = 0;
+        
+        function ActiveSlide(n){
+          for(slide of slides)
+          slide.classList.remove('active');
+          slides[n].classList.add('active');
+        }
+    </script>    
+  </body>
+  </html>
